@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/H5video/H5video",
+    "pages/H5Vid/H5Vid"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}
