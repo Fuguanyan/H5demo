@@ -63,10 +63,10 @@
 				<view class="author">
 					{{userData.name}}
 				</view>
-				<view class="amount">粉丝{{}}</view>
+				<view class="amount">粉丝:</view>
 			</view>
 			<view class="introduce">
-				<text>简介:{{}}</text>
+				<text>简介:</text>
 			</view>
 		</view>
 		<view class="comment">

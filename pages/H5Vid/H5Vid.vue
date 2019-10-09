@@ -1,9 +1,12 @@
 <template>
 	<view>
-		<view>
-			<view class="bg bg-blur" :style="'background:url('+websiteUrl+str.musicImg+')'">
-
+		<view class="bg-show">
+			<view >
+				<view class="bg bg-blur" :style="'background:url('+websiteUrl+str.musicImg+')'">
+				
+				</view>
 			</view>
+			
 			<view class="content-front">
 				<view class="wrapper-title">
 					<view class="left">
@@ -59,7 +62,7 @@
 				<view class="btn">
 					<button type="primary" @tap="setTabadd(1)" :class="{'active':indexId===1}">打开</button>
 					
-					<button type="primary" @tap="setTabadd(2)" :class="{'active':indexId===2}">下载</button>
+					<button style="color: #1C9AF6;" type="primary" @tap="setTabadd(2)" :class="{'active':indexId===2}">下载</button>
 				</view>
 
 			</view>
@@ -166,25 +169,32 @@
 </script>
 
 <style>
+	.bg-show{
+		overflow: hidden;
+		
+	}
 	.bg {
 		/* background: url("../../static/timg.jpg"); */
-		height: 730px;
-		text-align: center;
+		height: 750px;
+		
 		line-height: 600px;
+		/* width: 100%; */
+		
 	}
 
 	.bg-blur {
 		float: left;
 		width: 100%;
-
+		height: 750px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: cover;
-		-webkit-filter: blur(15rpx);
+		background-size:cover;
+		/* -webkit-filter: blur(15rpx);
 		-moz-filter: blur(15rpx);
 		-o-filter: blur(15rpx);
-		-ms-filter: blur(15rpx);
-		filter: blur(15rpx);
+		-ms-filter: blur(15rpx); */
+		filter: blur(150rpx) opacity(2);
+		
 	}
 
 	.content-front {
@@ -304,7 +314,7 @@
 
 		height: 350rpx;
 		width: 350rpx;
-		background: url(../../static/timg.jpg);
+		/* background: url(../../static/timg.jpg); */
 		background-size: cover;
 		animation: move 15s linear infinite;
 
@@ -344,19 +354,25 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		height: 120rpx;
+		height: 45rpx;
+		
 		width: 230rpx;
 		/* border: 1rpx solid #007AFF; */
 		margin: 0 auto;
 	}
 
 	.message-name {
-		font-size: 38rpx;
+		display: inline-block;
+		font-size: 28rpx;
 		font-family: PingFangSC-Regular, PingFangSC;
 		color: rgba(255, 255, 255, 1);
 		font-weight: 400;
 		line-height: 25rpx;
 		margin-bottom: 30rpx;
+		text-align: center;
+		height:105px;
+		width: 120px;
+		/* border: 1rpx solid #007AFF; */
 	}
 
 	.message-A {
@@ -403,18 +419,26 @@
 		border: 1px solid rgba(28, 154, 246, 1);
 		font-family: PingFangSC-Medium, PingFangSC;
 		font-weight: 500;
-		color: rgba(24, 146, 245, 1);
+		/* color: rgba(24, 146, 245, 1); */
+		/* border: 1rpx solid #DD524D; */
 		background: transparent;
 		text-align: center;
 		line-height: 65rpx;
+		/* background: #FFFFFF; */
+		
+		
 
 	}
 	.active{
 		background: #E9ECEF !important;
+		background:#1C9AF6 !important ;
+		
 	}
 
 	.cate-active {
-		color: #2C405A !important;
+		
+		color: #1C9AF6 !important;
+		border: 1rpx solid #1C9AF6 !important;
 	}
 
 
@@ -474,17 +498,18 @@
 	>>>.uni-audio-author {
 		display: none;
 	}
-	.mocen{
+	 .mocen{
+		 display: none;
 		height: 376rpx;
 		width: 376rpx;
 		border: 50rpx;
 		position: absolute;
-		top: 58%;
+		top: 50%;
 		left: 50%;
-		/* z-index: 600; */
-		/* border-radius: 50%; */
-		background: url(../../static/record.png) no-repeat;
+		/* z-index: 600; 
+		 border-radius: 50%; */
+		/* background: url(../../static/record.png) no-repeat; */
 		 background-size: contain;
 		transform: translate(-50%,-58%);
-	}
+	} 
 </style>
